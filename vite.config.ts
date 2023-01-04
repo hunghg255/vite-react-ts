@@ -1,27 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import EnvironmentPlugin from 'vite-plugin-environment';
 import checker from 'vite-plugin-checker';
-import alias from '@rollup/plugin-alias'
 import * as path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    EnvironmentPlugin("all"),
+    EnvironmentPlugin('all'),
     //  resolve({ "react-codemirror2": `
     //       const UnControlled = {};
     //       export {
     //         UnControlled,
     //       }`
     //   }
-  checker({
-    typescript: true,
-  }),
+    checker({
+      typescript: true,
+    }),
   ],
   optimizeDeps: {
-    include: ["react"],
+    include: ['react'],
   },
   build: {
     commonjsOptions: {
@@ -35,9 +34,9 @@ export default defineConfig({
     sourcemap: true,
   },
   server: {
-    port: 3000
+    port: 3000,
   },
   preview: {
-    port: 3000
-  }
-})
+    port: 3000,
+  },
+});
