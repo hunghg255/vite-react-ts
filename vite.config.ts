@@ -22,10 +22,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react'],
   },
+  css: {
+    devSourcemap: true,
+  },
   build: {
     commonjsOptions: {
       include: [/node_modules/],
     },
+    // sourcemap: true // Check analyze
   },
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
