@@ -11,7 +11,7 @@
     "lint": "eslint --ext .ts,.tsx src --color",
     "format": "prettier --write \"./src/**/*.{ts,tsx,json}\"",
     "prepare": "husky install",
-    "analyze": "source-map-explorer 'dist/assets/*.js'"
+    "analyze": "npm run lint && tsc && vite build --mode=analyze && source-map-explorer 'dist/assets/*.js'"
   },
   "dependencies": {
     "react": "^18.2.0",
