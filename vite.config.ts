@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite';
+import * as path from 'node:path';
+
 import react from '@vitejs/plugin-react';
-import EnvironmentPlugin from 'vite-plugin-environment';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
-import * as path from 'path';
-console.log('asdasd');
+import EnvironmentPlugin from 'vite-plugin-environment';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {

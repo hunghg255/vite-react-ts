@@ -13,6 +13,4 @@ node_modules
 
 .swc
 
-next.config.js
-
-next-i18next.config.js
+vite.config.ts
