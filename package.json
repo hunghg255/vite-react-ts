@@ -30,8 +30,6 @@
     "eslint": "^8.47.0",
     "eslint-config-react-app": "^7.0.1",
     "git-scm-hooks": "^0.0.6",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.3.0",
     "prettier": "^2.8.8",
     "sass": "^1.66.1",
     "source-map-explorer": "^2.5.3",
