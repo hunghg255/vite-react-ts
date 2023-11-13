@@ -6,6 +6,7 @@ import EnvironmentPlugin from 'vite-plugin-environment';
 import Printer from 'vite-host-qrcode/vite';
 import webfontDownload from 'vite-plugin-webfont-dl';
 import ResizeImage from 'vite-plugin-resize-image/vite';
+import ConsoleDebug from 'vite-console-debug/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -54,6 +55,9 @@ export default defineConfig(({ mode }) => {
         ],
       }),
       webfontDownload(),
+      ConsoleDebug({
+        noConsole: !isDev,
+      }),
     ],
     css: {
       devSourcemap: isDev,
