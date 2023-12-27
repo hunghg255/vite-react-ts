@@ -4,8 +4,9 @@ import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import EnvironmentPlugin from 'vite-plugin-environment';
 import Printer from 'vite-host-qrcode/vite';
-import webfontDownload from 'vite-plugin-webfont-dl';
+// import webfontDownload from 'vite-plugin-webfont-dl';
 import ResizeImage from 'vite-plugin-resize-image/vite';
+import MinifyCssModule from 'vite-minify-css-module/vite';
 import ConsoleDebug from 'vite-console-debug/vite';
 
 // https://vitejs.dev/config/
@@ -33,7 +34,7 @@ export default defineConfig(({ mode }) => {
       }),
       ResizeImage({
         mode: 'sharp',
-        cache: true,
+        cache: false,
         compress: {
           jpg: {
             quality: 70,
@@ -54,7 +55,8 @@ export default defineConfig(({ mode }) => {
           { from: 'JPG', to: 'jpeg' },
         ],
       }),
-      webfontDownload(),
+      // webfontDownload({ }),
+      MinifyCssModule(),
       ConsoleDebug({
         noConsole: !isDev,
       }),
@@ -78,10 +80,10 @@ export default defineConfig(({ mode }) => {
       sourcemap: isDev,
     },
     server: {
-      port: 4005,
+      // port: 4005,
     },
     preview: {
-      port: 4005,
+      // port: 4005,
     },
   };
 });
