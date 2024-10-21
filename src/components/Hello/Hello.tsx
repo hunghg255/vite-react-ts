@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Hello = () => {
+function Hello() {
   return (
     <>
       <h1>Hello Hello</h1>
     </>
   );
-};
+}
 
 export default Hello;

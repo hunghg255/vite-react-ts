@@ -19,7 +19,7 @@
     "types": ["node"],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
   },
-  "include": ["src"]
+  "include": ["src", "./vite.config.ts", "./eslint.config.js"],
 }
