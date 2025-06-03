@@ -22,7 +22,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@hunghg255/eslint-config": "^0.0.1",
+    "@hunghg255/eslint-config": "^0.1.1",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^20.17.9",
     "@types/react": "^19.0.0",
